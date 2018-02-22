@@ -1,0 +1,17 @@
+server:
+  port: 8000
+
+spring:
+  jackson:
+    serialization:
+      write_dates_as_timestamps: false
+
+search:
+  engine:
+    server:
+      endpoint: http://localhost:8001
+      http:
+        client:
+          read_timeout_millis: 10000
+
+

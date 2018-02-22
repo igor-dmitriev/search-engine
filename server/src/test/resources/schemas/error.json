@@ -1,0 +1,45 @@
+{
+  "$id": "http://example.com/example.json",
+  "type": "object",
+  "definitions": {},
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "properties": {
+    "errors": {
+      "$id": "/properties/errors",
+      "type": "array",
+      "items": {
+        "$id": "/properties/errors/items",
+        "type": "object",
+        "properties": {
+          "status": {
+            "$id": "/properties/errors/items/properties/status",
+            "type": "integer",
+            "title": "The Status Schema",
+            "default": 0,
+            "examples": [
+              404
+            ]
+          },
+          "title": {
+            "$id": "/properties/errors/items/properties/title",
+            "type": "string",
+            "title": "The Title Schema",
+            "default": "",
+            "examples": [
+              "Requested resource not found"
+            ]
+          },
+          "detail": {
+            "$id": "/properties/errors/items/properties/detail",
+            "type": "string",
+            "title": "The Detail Schema",
+            "default": "",
+            "examples": [
+              "Document not found with key: 1"
+            ]
+          }
+        }
+      }
+    }
+  }
+}

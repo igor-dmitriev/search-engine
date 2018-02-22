@@ -1,0 +1,35 @@
+{
+  "$id": "http://example.com/example.json",
+  "type": "object",
+  "definitions": {},
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "properties": {
+    "key": {
+      "$id": "/properties/key",
+      "type": "string",
+      "title": "The Key Schema",
+      "default": "",
+      "examples": [
+        "1"
+      ]
+    },
+    "data": {
+      "$id": "/properties/data",
+      "type": "string",
+      "title": "The Data Schema",
+      "default": "",
+      "examples": [
+        "2"
+      ]
+    },
+    "createdAt": {
+      "$id": "/properties/createdAt",
+      "type": "string",
+      "title": "The Createdat Schema",
+      "default": "",
+      "examples": [
+        "2018-02-21T19:06:37.841"
+      ]
+    }
+  }
+}

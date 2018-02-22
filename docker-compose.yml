@@ -1,0 +1,32 @@
+version: '2.1'
+services:
+
+  server:
+    build:
+      context: .
+      dockerfile: docker/Dockerfile
+      args:
+        jarFile: ./server/target/server.jar
+    command: -m 2056m
+    ports:
+      - 8001
+
+  client:
+    build:
+      context: .
+      dockerfile: docker/Dockerfile
+      args:
+        jarFile: ./client/target/client.jar
+    command: -m 512m
+    ports:
+      - 8000:8000
+    depends_on:
+      - server
+    environment:
+      - SEARCH_ENGINE_SERVER_ENDPOINT=http://server:8001
+
+
+
+
+
+
